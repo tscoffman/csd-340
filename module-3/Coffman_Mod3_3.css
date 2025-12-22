@@ -1,0 +1,54 @@
+/* Trenten Coffman
+	Module 3.2 Assignment */
+
+h1 {
+    text-align: center;
+}
+
+#leftDiv, #rightDiv {
+    width: 45%;
+    float: left;
+    box-sizing: border-box;
+}
+
+#rightDiv {
+    float: right;
+}
+
+#bottomDiv {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    font-weight: 300;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    list-style-type: upper-roman;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d60000;
+}
