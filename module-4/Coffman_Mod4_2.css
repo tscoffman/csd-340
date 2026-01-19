@@ -1,0 +1,27 @@
+/* Trenten Coffman
+	Module 4.2 Assignment */
+#image-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 10%;
+}
+
+h1 {
+	text-align: center;
+	color: rgba(39, 208, 245, 0.8);
+}
+
+#image-gallery h3 {
+	text-align: center;
+	color: rgba(90, 0, 130, 0.61);
+}
+
+#image-gallery figure {
+	text-align: center;
+}
+
+#image-gallery figcaption {
+	font-style: italic;
+	font-size: 0.75em;
+	color: rgba(0, 0, 0, 0.61);
+}
