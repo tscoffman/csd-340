@@ -1,0 +1,48 @@
+<!--
+	Trenten Coffman
+	Assignment 10.3
+	March 1, 2026
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSD 340 Development with HTML and CSS</title>
+	<script>
+		var rotations = {};
+		function rotateImage(imgName) {
+			if (!rotations[imgName]) {
+				rotations[imgName] = 0;
+			}
+			rotations[imgName] = (rotations[imgName] + 90) % 360;
+			document.images[imgName].style.transform = 'rotate(' + rotations[imgName] + 'deg)';
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Assignment 10.3: JavaScript - Part 2</h1>
+	<p>Try clicking the images</p>
+	<br />
+	<div>
+      <a href=#
+         onmouseout="scooby.src='scooby_unmasking1.png';"
+         onmouseover= "scooby.src='scooby_unmasking2.png';"
+		 onclick="rotateImage('scooby'); return false;"
+      >
+        <img border = 0 name = "scooby" src = "scooby_unmasking1.png">
+      </a>
+    </div>
+	<br />
+	<div>
+      <a href=#
+         onmouseout="color.src='colorblindgraph1.png';"
+         onmouseover= "color.src='colorblindgraph2.png';"
+		 onclick="rotateImage('color'); return false;"
+      >
+        <img border = 0 name = "color" src = "colorblindgraph1.png">
+      </a>
+    </div>
+</body>
+
+</html>
