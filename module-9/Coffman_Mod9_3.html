@@ -1,0 +1,41 @@
+<!--
+	Trenten Coffman
+	Assignment 9.3
+	March 1, 2026
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSD 340 Development with HTML and CSS</title>
+	<script>
+		var firstWordValue = "knights";
+		var secondWordValue = "Fiona";
+		var thirdWordValue = "forth";
+		var fourthWordValue = "may";
+	</script>
+</head>
+
+<body>
+	<h1>Assignment 9.3: JavaScript - Part 1</h1>
+	<h2>Lord Farquaad's Speech</h2>
+	<p>Brave <span id="knights">_______</span>. You are the best and brightest in all the land.</p>
+	<p>Today, one of you shall prove himself...</p>
+	<p>That champion shall have the honor... No, no, the privilege to go forth and
+	rescue the lovely princess <span id="Fiona">_____</span> from the fiery keep of the dragon.</p>
+	<p>If for many reasons the winner is unsuccessful, the first runner up will take
+	his place and so on and so <span id="forth">_____</span>.</p>
+	<p>Some of you <span id="may">___</span> die, but it's a sacrifice I am willing to make.</p>
+	<p>
+		<button type="button"
+		onclick="document.getElementById('knights').innerHTML = firstWordValue">knights</button> <br />
+		<button type="button"
+		onclick="document.getElementById('Fiona').innerHTML = secondWordValue">Fiona</button> <br />
+		<button type="button"
+		onclick="document.getElementById('forth').innerHTML = thirdWordValue">forth</button> <br />
+		<button type="button"
+		onclick="document.getElementById('may').innerHTML = fourthWordValue">may</button>
+	</p>
+</body>
+
+</html>
