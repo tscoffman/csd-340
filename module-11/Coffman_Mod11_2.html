@@ -1,0 +1,133 @@
+<!--
+	Trenten Coffman
+	Assignment 11.2
+	March 8, 2026
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<script>
+		var taskArray = [];
+		
+		function addItem() {
+			var input = document.getElementById("taskInput");
+			var value = input.value.trim();
+			
+			if (value === "") {
+				alert("Please enter something in the text box first.");
+				return;
+			}
+			
+			taskArray.push(value);
+			alert("Added: \"" + value + "\"");
+			input.value = "";
+			displayItems();
+		}
+		
+		function deleteLastItem() {
+			if (taskArray.length === 0) {
+				alert("There's nothing in the list to delete.");
+				return;
+			}
+			var removed = taskArray.pop();
+			alert("Deleted: \"" + removed + "\"");
+			displayItems();
+		}
+		
+		function sortItems() {
+			if (taskArray.length === 0) {
+				alert("There's nothing in the list to sort.");
+				return;
+			}
+			taskArray.sort();
+			alert("The list has been sorted alphabetically!");
+			displayItems();
+		}
+		
+		function displayItems() {
+			var list = document.getElementById("taskList");
+			list.innerHTML = "";
+			for (var i = 0; i < taskArray.length; i++) {
+				var li = document.createElement("li");
+				li.textContent = taskArray[i];
+				list.appendChild(li);
+			}
+		}
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+	<style>
+		html {
+			background-color: #363636
+		}
+		
+		body {
+			font-family: 'Nunito', sans-serif;
+			max-width: 600px;
+			margin: 40px auto;
+			padding: 0 24px;
+			background-color: #363636;
+			color: #ffffff;
+		}
+
+		h1 {
+			margin-bottom: 24px;
+			color: #ffffff
+		}
+		
+		input[type="text"] {
+			padding: 8px 12px;
+			font-family: 'Nunito', sans-serif;
+			font-size: 15px;
+			border: 1px solid #ccc;
+			border-radius: 6px;
+			width: 100%;
+			margin-bottom: 12px;
+		}
+		
+		button {
+			font-family: 'Nunito', sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			padding: 8px 18px;
+			border: none;
+			border-radius: 6px;
+			margin-right: 8px;
+			color: #ffffff;
+		}
+		
+		button:nth-of-type(1) {
+			background-color: #3b82f6;
+		}
+		
+		button:nth-of-type(2) {
+			background-color: #ef4444;
+		}
+		
+		button:nth-of-type(3) {
+			background-color: #8b5cf6;
+		}
+		
+		h2 {
+			margin-top: 28px;
+		}
+		
+		#taskList {
+			padding-left: 20px;
+			line-height: 2;
+		}
+	</style
+</head>
+
+<body>
+	<h1>Assignment 11.2: JavaScript - Part 3</h1>
+	<input type="text" id="taskInput" placeholder="Enter a task into the to-do list..."/>
+	<button onclick="addItem()">Add</button>
+	<button onclick="deleteLastItem()">Delete Last Entry</button>
+	<button onclick="sortItems()">Sort</button>
+	<h2>Things To Do:</h2>
+	<ul id="taskList"></ul>
+</body>
+
+</html>
